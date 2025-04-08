@@ -38,8 +38,8 @@ with st.expander("View Count Plots for Applicant Info"):
     plt.tight_layout()
     st.pyplot(fig2)
 # Load model and encoder
-model = joblib.load("C:\\Users\\abdal\\OneDrive\\المستندات\\Desktop\\Financial aid\\gradient_boosting_model.pkl")
-encoder_path = "C:\\Users\\abdal\\OneDrive\\المستندات\\Desktop\\Financial aid\\onehot_encoder.pkl"
+model = joblib.load("gradient_boosting_model.pkl")
+encoder_path = "onehot_encoder.pkl"
 @st.cache_resource
 def load_encoder():
     df = pd.read_csv("cleanedd.csv")  # path to your full dataset
