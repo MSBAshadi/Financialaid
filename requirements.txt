@@ -170,6 +170,5 @@ wavio==0.0.9
 wcwidth==0.2.6
 weasel==0.3.4
 webencodings==0.5.1
-Werkzeug==3.0.3
 xgboost==2.0.3
 zipp==3.16.2
