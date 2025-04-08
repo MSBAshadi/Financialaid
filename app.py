@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # Set Streamlit page configuration
 st.set_page_config(page_title="Financial Aid Predictor", layout="centered")
 st.header("📊 Data Visualizations")
-df = pd.read_csv("C:\\Users\\abdal\\cleanedd.csv")
+df = pd.read_csv("cleanedd.csv")
 with st.expander("View Pie Charts for Special Circumstances and Documents"):
     # Pie Charts for specific categorical columns
     pie_columns = ["Special Family Circumstances", "Loan", "FAID Missing Document"]
@@ -42,7 +42,7 @@ model = joblib.load("C:\\Users\\abdal\\OneDrive\\المستندات\\Desktop\\Fi
 encoder_path = "C:\\Users\\abdal\\OneDrive\\المستندات\\Desktop\\Financial aid\\onehot_encoder.pkl"
 @st.cache_resource
 def load_encoder():
-    df = pd.read_csv("C:\\Users\\abdal\\cleanedd.csv")  # path to your full dataset
+    df = pd.read_csv("cleanedd.csv")  # path to your full dataset
     encoder = OneHotEncoder(sparse=False, handle_unknown='ignore')
     encoder.fit(df[categorical])
     return encoder
